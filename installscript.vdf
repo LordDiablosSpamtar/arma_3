@@ -1,0 +1,36 @@
+"installscript"
+{
+	"Run Process"
+	{
+		"DirectX"
+		{
+			"description"		"Microsoft DirectX for Windows"
+			"process 1"		"%INSTALLDIR%\\DirectX\\DXSETUP.exe"
+			"command 1"		"/silent"
+			"NoCleanUp"		"1"
+		}
+	}
+	"Registry"
+	{
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Bohemia Interactive\\Arma 3"
+		{
+			"string"
+			{
+				"data"		"%MAIN%"
+				"main"		"%INSTALLDIR%"
+			}
+		}
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Bohemia Interactive\\Arma 3\\Expansions\\Arma 3"
+		{
+			"string"
+			{
+				"MODDIR"		"A3"
+				"Path"		"SOFTWARE\\Bohemia Interactive\\Arma 3"
+			}
+		}
+	}
+}
+"kvsignatures"
+{
+	"installscript"		"1af419c5d6838afdf9035e69cf6695ef6528096ba5294a4d65f4efb04c00cdc7b19446063e378c8308170e39e4278178575474b5bd2148387acc1037a32009292b977672d124071848d6e44d42d5627c42aca81c0797e99082a7ddd48c5313051ac6f0a710d91c9ccc42105ec11a06b2b9393065a4efd0d8a718c2f81340bab9"
+}
